@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>H&M 공식 온라인 사이트</title>
+  <link rel="stylesheet" href="CSS/common.css">
+  <script src="JS/jquery-3.6.0.js"></script>
+  <script src="JS/jquery-migrate-1.4.1.min.js"></script>
+  <script src="JS/common.js" async></script>
+</head>
+
+<body>
+  <header id="header">
+    <a href="#">
+    <h1 id="logo">H&amp;M 온라인 사이트 로고</h1>
+    </a>
+
+    <nav id="gnb">
+      <h2 class="hidden">H&amp;M 사이트 퀵 메뉴</h2>
+      <ul id="gnb-list">
+        <li><a href="#" class="title">MEN</a>
+          <ul class="men list">
+            <li><a href="#">아우터</a></li>
+            <li><a href="#">후디 & 스웨터</a></li>
+            <li><a href="#">티셔츠</a></li>
+            <li><a href="#">팬츠</a></li>
+            <li><a href="#">신발</a></li>
+            <li><a href="#">그 외 용품</a></li>
+            <li><a href="#">신상품</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="title">WOMEN</a>
+          <ul class="women list">
+            <li><a href="#">아우터</a></li>
+            <li><a href="#">후디 & 스웨터</a></li>
+            <li><a href="#">티셔츠</a></li>
+            <li><a href="#">팬츠</a></li>
+            <li><a href="#">신발</a></li>
+            <li><a href="#">그 외 용품</a></li>
+            <li><a href="#">신상품</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="title">KID</a>
+          <ul class="kid list">
+            <li><a href="#">아우터</a></li>
+            <li><a href="#">후디 & 스웨터</a></li>
+            <li><a href="#">티셔츠</a></li>
+            <li><a href="#">팬츠</a></li>
+            <li><a href="#">신발</a></li>
+            <li><a href="#">그 외 용품</a></li>
+            <li><a href="#">신상품</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="title">H&amp;M HOME</a>
+          <ul class="home list">
+            <li><a href="#">침실 용품</a></li>
+            <li><a href="#">거실 용품</a></li>
+            <li><a href="#">주방 용품</a></li>
+            <li><a href="#">욕실 용품</a></li>
+            <li><a href="#">그 외 용품</a></li>
+            <li><a href="#">신상품</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="title">EVENT</a>
+          <ul class="sale list">
+            <li><a href="#"><strong>여성복 세일 보기</strong></a>
+              <ul id="women-sale">
+                <li><a href="#">의류</a></li>
+                <li><a href="#">그 외</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><strong>남성복 세일 보기</strong></a>
+              <ul id="men-sale">
+                <li><a href="#">의류</a></li>
+                <li><a href="#">그 외</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><strong>아동복 세일 보기</strong></a>
+              <ul id="kid-sale">
+                <li><a href="#">의류</a></li>
+                <li><a href="#">그 외</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><strong>H&amp;M HOME<br>세일 보기</strong></a>
+              <ul id="home-sale">
+                <li><a href="#">룸별 용품 보기</a></li>
+                <li><a href="#">그 외 용품 보기</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#" class="title">ABOUT H&amp;M</a>
+          <ul class="about list">
+            <li><a href="#">H&amp;M 소개</a></li>
+            <li><a href="#">H&amp;M 기업 철학</a></li>
+            <li><a href="#">H&amp;M take care zone</a></li>
+            <li><a href="#">H&amp;M 제품 소개</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div id="account-wrap">
+        <ul id="account-list">
+          <li id="login"><a href="#">로그인</a></li>
+          <li id="join"><a href="#">회원가입</a></li>
+          <li id="find"><input type="text"><a href="#"> 검색</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+  </header>
+
+  <div id="eventWrap">
+    <h3 id="eventTitle">NEW EVENT</h3>
+    <div id="listWrap">
+    <ul id="eventList">
+      <li><a href="#">Balmain X H&amp;M 뉴 콜라보레이션</a></li>
+      <li><a href="#">H&amp;M 단독 40% 세일 기간</a></li>
+      <li><a href="#">하이웨스트 진 재고 부족 안내</a></li>
+    </ul>
+    <ul id="eventArrowList">
+      <li><a href="#" id="up">&uarr;</a></li>
+      <li><a href="#" id="down">&darr;</a></li>
+    </ul>
+  </div>
+    
+  </div>
+
+  <main>
+    <div id="contentWrap">
+      <section id="section1">
+        <h3 class="hidden">상품 슬라이드</h3>
+        <!-- dl-dt-dd로 수정 -->
+
+          <ul id="titleList">
+            <li>
+              <strong>H&amp;M Korea 매장 40% 할인 안내</strong><br>
+              <span>전국 H&amp;M Korea 40% 할인 이벤트.
+              오직 한국에서만.</span>
+              <a href="#" title="H&M 40% 할인 행사 자세히 보기 링크">자세히 보기</a>
+            </li>
+            <li>
+              <strong>Keith Haring X H&amp;M</strong> <br>
+              <span>Keith Haring과 H&amp;M의 만남. <br>
+              한 번도 만난 적 없던 이들끼리 만나 <br>
+              선보이는 한 번도 없었던 디자인.<br>
+              멤버십 이용 시 10% 할인.<br></span>
+              <a href="#" title="키스 해링과 H&M의 콜라보레이션 제품 자세히 보기 링크">자세히 보기</a>
+            </li>
+            <li>
+              <strong>Balmain X H&amp;M</strong>
+              <span>고급스러운 소재, 절제된 수공예적 디테일<br>
+              H&amp;M과 만난 발망은 H&amp;M 안에서 <br>
+              각각의 의류에 걸맞는 소재와 디테일을 <br>
+              삽입하여 완전히 다른 H&amp;M으로 태어나게
+              하였다.<br></span>
+              <a href="#" title="발망과 H&M의 콜라보레이션 제품 자세히 보기 링크">자세히 보기</a>
+            </li>
+
+</ul>
+
+        <ul id="sliderList">
+          <li class="slider1"><a href="#" class="on"></a></li>
+          <li class="slider2"><a href="#"></a></li>
+          <li class="slider3"><a href="#"></a></li>
+        </ul>
+
+       
+      </section>
+
+      <section id="section2">
+        <hgroup id="section2Title">
+          <h3>BEST SELLER</h3>
+          <h4>H&amp;M의 인기 상품을 추천해 드립니다.</h4>
+        </hgroup>
+        <div id="recommendWrap">
+        <dl id="recommendList">  
+          <dt>1</dt> 
+          <dd id="list1">
+            <a href="#" class="add-description">
+            패딩 스니커즈 부츠<br>39,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+
+          <dt>2</dt>
+          <dd id="list2">
+            <a href="#">
+            리브니트 가디건<br>29,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+        
+
+          <dt>3</dt>
+          <dd id="list3">
+            <a href="#">
+            스톤웨어 화병<br>19,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+
+          <dt>4</dt>
+          <dd id="list4">
+            <a href="#">
+            90s 배기 하이웨이스트 진<br>39,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+
+          <dt>5</dt> 
+          <dd id="list5">
+            <a href="#">
+            울 블렌드 셔츠 재킷<br>79,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+
+          <dt>6</dt>
+          <dd id="list6">
+            <a href="#">
+            위켄드 백<br>69,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+        
+
+          <dt>7</dt>
+          <dd id="list7">
+            <a href="#">
+            롱 가디건<br>29,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+          
+
+          <dt>8</dt>
+          <dd id="list8">
+            <a href="#">
+            메이크업 브러쉬<br>12,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+          
+
+          <dt>9</dt>
+          <dd id="list9">
+            <a href="#">
+            레귤러 진<br>29,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+          
+
+          <dt>10</dt>
+          <dd id="list10">
+            <a href="#">
+            스포츠 캡<br>14,900원<br><br>
+            <span>자세히 보기</span>
+          </a>
+          </dd>
+          
+        </dl>
+      </div> 
+        <ul id="arrowList">
+          <li><a href="#" id="left">&larr;</a></li>
+          <li><a href="#" id="right">&rarr;</a></li>
+        </ul>
+      </section>
+
+      <section id="section3">
+        <hgroup id="section3Title">
+          <h3>customer center</h3>
+          <h4>H&amp;M만의 빠르고 확실한 1:1 고객 센터는 H&amp;M 고객 상담 센터, 매장 찾기, H&amp;M Care Zone으로 이루어져 있습니다.</h4>
+        </hgroup>
+
+        <div id="customerCenterWrap">
+          <ul id="customerCenterList">
+            <li><a href="#">고객 상담 센터</a></li>
+            <li><a href="#">매장 찾기</a></li>
+            <li><a href="#">H&amp;M Care Zone</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="section4">
+        <hgroup id="section4Title">
+          <h3>community</h3>
+          <h4>H&amp;M 사용자들의 사용 후기를 직접 만나 보세요. 인스타그램의 해시태그를 이용하여
+            커뮤니티 활동에 참여할 수 있습니다. <strong>#H&M #H&M_후기</strong>
+          </h4>
+        </hgroup>
+
+        <div id="communityWrap">
+          <ul id="communityList">
+            <li><a href="#">#HnM<br>#HnM스타그램<br> 주변에 있는 HnM 매장에 들러 필요한 옷 구매함!</a></li>
+            <li><a href="#">#HnM #HnM챌린지<br> HnM 홈페이지에 내 사진이 실릴 수 있는 기회를 틈타, 구매했던 옷들 리뷰 작성해 봅니다.</a></li>
+            <li><a href="#">#HnM<br>H&amp;M에 새로운 컬렉션이 나온다고 해서<br> 가서 구매해 봄!</a></li>
+            <li><a href="#">#HnM<br> #HnM화이팅 <br> 몇년째 잘 입고 있는 HnM 옷을 소개합니다.</a></li>
+            <li><a href="#">#HnM #나들이 #HnM_후기<br> 유니클로랑 비슷하지만 어쩐지 독특한 디자인이 더 많은 것 같지 않나요?</a></li>
+            <li><a href="#">#HnM #HnM할인이벤트 #HnM코리아<br> 오랜만에 친구랑 매장 구경왔당</a></li>
+            <li><a href="#">#HnM #카페 #HnM다녀옴</a></li>
+            <li><a href="#">#HnM #HnM스태프 #HnM할인행사중 <br> 많이 찾아와 주세요. 현재 HnM코리아에서만 할인 행사하고 있습니다.</a></li>
+            <li><a href="#">#HnM #나들이 #HnM_후기<br> 유니클로랑 비슷하지만 어쩐지 독특한 디자인이 더 많은 것 같지 않나요?</a></li>
+            <li><a href="#">#HnM #HnM할인이벤트 #HnM코리아<br> 오랜만에 친구랑 매장 구경왔당</a></li>
+            <li><a href="#">#HnM #카페 #HnM다녀옴</a></li>
+            <li><a href="#">#HnM #HnM스태프 #HnM할인행사중 <br> 많이 찾아와 주세요. 현재 HnM코리아에서만 할인 행사하고 있습니다.</a></li>
+            <li><a href="#">#HnM #나들이 #HnM_후기<br> 유니클로랑 비슷하지만 어쩐지 독특한 디자인이 더 많은 것 같지 않나요?</a></li>
+            <li><a href="#">#HnM #HnM할인이벤트 #HnM코리아<br> 오랜만에 친구랑 매장 구경왔당</a></li>
+            <li><a href="#">#HnM #카페 #HnM다녀옴</a></li>
+          
+          </ul>
+
+          <ul id="viewMore">
+            <li><a href="#">view more</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="section5">
+        <hgroup id="section5Title">
+          <h3>magazine</h3>
+          <h4>H&amp;M의 다양한 소식을 찾아볼 수 있습니다.</h4>
+        </hgroup>
+
+        <div id="magazineWrap">
+          <ul id="magazineList">
+            <li><a href="#">다가올 봄에 출시 예정, Iris Apfel X H&amp;M</a></li>
+            <li><a href="#">뉴 - 컬렉션, Blue Version, <br> H&amp;M만의 컬러 표현 방법</a></li>
+            <li><a href="#">H&amp;M의 제품 품질 검사 과정을 살펴 보세요.</a></li>
+            <li><a href="#">오래된 것들을 새것으로, 또 나만의 것으로.<br> 올 겨울부터 재활용 서비스 제공</a></li>
+            <li><a href="#">H&amp;M 40% 할인 기간 행사로 매출 급증</a></li>
+
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div id="footerWrap">
+    <div id="footerLogo">footer 로고</div>
+    <small>이 사이트의 콘텐츠는 저작권 보호를 받고 있는 H &amp; M Hennes &amp; Mauritz AB의 자산입니다.</small>
+    <address>
+      법인명 에이치앤엠헤네스앤모리츠 주식회사 | 통신판매업신고번호: 제 2019 서울종로 1411 호 <br>사업자등록번호: 220-87-83339 | 대표자 아담칼슨, 루카스세이퍼트
+      서울특별시 종로구 종로 51, 종로타워 17 층 03161 | 대표번호 080-822-0220 | info.kr@hm.com
+    </address>
+    <div id="bulletinWrap">
+      <ul id="bulletinList">
+        <li><a href="#">고객 센터</a></li>
+        <li><a href="#">공지 사항</a></li>
+        <li><a href="#">배송 조회</a></li>
+        <li><a href="#">채용 정보</a></li>
+        <li><a href="#">개인정보 보호 정책</a></li>
+      </ul>
+    </div>
+    <div id="snsWrap">
+      <ul id="snsList">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+</body>
+
+</html>
