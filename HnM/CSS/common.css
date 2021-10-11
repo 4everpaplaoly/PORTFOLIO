@@ -75,7 +75,7 @@ a { text-decoration: none; }
   line-height: 50px;
   position: absolute;
   top: 45px;
-  right: 10px;
+  right: 0;
 }
 #account-list li {
   float: left;
@@ -164,12 +164,14 @@ a { text-decoration: none; }
 /* 가장 최상위 슬라이더의 img 공통 설정*/
 
 #titleList {
-  width: 2800px;
+  width: 3100px;
   position: relative;
+  height: 1000px;
   top:0;
-  left:calc(50% - 450px);
+  left:calc(50% - 1550px);
   display: flex;
   justify-content: space-between;
+ 
 }
 
 .title-item {
@@ -211,49 +213,52 @@ a { text-decoration: none; }
 
 /* 첫 번째 슬라이더 */
 #titleList div {
-  width: 900px;
-  height: 100vh;
-  background: no-repeat center / cover;
+  width: 1000px;
+  height: 1000px;
   position: relative;
+ 
 }
+
 #titleList div::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 450px;
-  height: 100%;
+  width: 500px;
+  height: 1000px;
   background: rgba(0, 0, 0, 0.3);
 }
-#titleList > div#titleSection1 {
-  background-image:url(../images/slider2.jpg);
-}
 
-#titleList > div#titleSection2 {
-  background-image:url(../images/slider3.jpg);
-}
+#titleList div:nth-of-type(1) {background:url(../images/slider1.jpg) no-repeat center / cover;}
+#titleList div:nth-of-type(2) {background:url(../images/slider2.jpg) no-repeat center / cover;}
+#titleList div:nth-of-type(3) {background:url(../images/slider3.jpg) no-repeat center / cover;}
 
-#titleList > div#titleSection3 {
-  background-image:url(../images/slider1.jpg);
-}
 
 
 /* 슬라이더 방향 알려주는 기능 설정 */
 #sliderList {
   width: 100%;
+  height: 100vh;
   position: absolute;
-  top: 950px;
+  top: 1100px;
   left: 0;
 }
 #sliderList li {
   width: 33.3333%;
   height: 2px;
-  background-color:#fff;
+  
   float: left;
 }
 
-#sliderList li.on {
+#sliderList li a.on {
   background-color:rgb(133, 29, 29);
+}
+
+#sliderList li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color:#fff;
 }
 
 
@@ -263,10 +268,11 @@ a { text-decoration: none; }
   width: 100%;
   height: 400px;
   position: relative;
-  top: 80px;
+  top: 70px;
 }
 #section2Title {
-  margin: 40px 0 30px 340px;
+  text-align: center;
+  margin: 100px 0;
 }
 #section2Title h3 {
   font-size: 30px;
@@ -280,16 +286,16 @@ a { text-decoration: none; }
 
 /* Section 2 - 상품 슬라이드 구간 */
 #recommendWrap {
-  width: 900px;
-  height: 250px;
-  overflow: hidden;
+  width: 1500px;
+  height: 350px;
   position: relative;
-  top: 20px;
-  left: calc(50% - 450px);
+  overflow: hidden;
+  top: 10px;
+  left: calc(50% - 750px);
 }
 #recommendList {
-  width: 2000px;
-  height: 200px;
+  width: 3500px;
+  height: 350px;
   display: flex;
   justify-content: space-between;
 }
@@ -300,18 +306,18 @@ a { text-decoration: none; }
   font-style:italic;
 }
 #recommendList dd {
-  width: 180px;
-  height: 180px;
-  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  margin: 30px 20px;
   background: no-repeat center / cover;
   border-radius: 50%;
   position: relative;
 }
 
 #recommendList dd a {
-  font-size: 12px;
+  font-size: 14px;
   display: block;
-  padding-top: 80px;
+  padding-top: 150px;
   box-sizing: border-box;
   text-align: center;
   width: 100%;
@@ -343,10 +349,11 @@ a { text-decoration: none; }
 /* Section 2 - 상품 슬라이드 방향 버튼 구간 */
 #arrowList {
   position: absolute;
-  top: 0;
-  left: calc(50% - 450px);
-  width: 900px;
+  top:calc(50% - 50px);
+  left: calc(50% - 750px);
+  width: 1500px;
   height: 100%;
+
 }
 
 #arrowList li a {
@@ -358,7 +365,7 @@ a { text-decoration: none; }
 }
 
 #left {
-  left: -100px;
+  left:-100px;
 }
 
 #right {
@@ -371,10 +378,11 @@ a { text-decoration: none; }
   width: 100%;
   height: 400px;
   position: relative;
-  top: 100px;
+  top: 250px;
 }
 #section3Title {
-  margin: 40px 0 30px 340px;
+  text-align: center;
+  margin: 100px 0;
 }
 #section3Title h3 {
   font-size: 30px;
@@ -403,13 +411,25 @@ a { text-decoration: none; }
   width: 300px;
   height: 300px;
   text-align: center;
-  border: 1px solid #000;
+  border: 1px solid rgb(117, 103, 103);
+  box-shadow: 2px 5px rgb(133, 29, 29);
 }
+
+#customerCenterList li:nth-of-type(1){background:url(../images/logo2.png) no-repeat center/ cover;}
+#customerCenterList li:nth-of-type(2){background:url(../images/customer_center2.png) no-repeat left/ cover;}
+#customerCenterList li:nth-of-type(3){background:url(../images/customer_center3.png) no-repeat left/ cover;}
 
 
 #customerCenterList li a {
- 
-}
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255, 0.3) 0%, rgba(0, 0, 0, 0.5) 80%);
+  opacity:0;
+} 
 
 
 /*section 4 - community*/
@@ -418,10 +438,11 @@ a { text-decoration: none; }
   width: 100%;
   height: 700px;
   position: relative;
-  top: 200px;
+  top: 400px;
 }
 #section4Title {
-  margin: 40px 0 30px 340px;
+  text-align: center;
+  margin: 100px 0;
 }
 #section4Title h3 {
   font-size: 30px;
@@ -441,14 +462,15 @@ a { text-decoration: none; }
 }
 
 #communityList {
-  width: 1000px;
-  height: 400px;
+  width: 1500px;
+  height: 430px;
   display: grid;
-  grid-template-columns: 250px 250px 250px 250px;
-  grid-template-rows: 200px 200px 200px 200px;
+  grid-template-columns: 250px 250px 250px 250px 250px;
+  grid-template-rows: 200px 200px 200px 200px 200px;
   gap: 20px;
   position: absolute;
-  left: calc(50% - 540px);
+  left: calc(50% - 650px);
+  overflow: hidden;
 }
 #communityList li {
   border: 1px solid rgb(117, 103, 103);
@@ -457,15 +479,17 @@ a { text-decoration: none; }
 
 #communityList li a {
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
+  line-height: 20px;
   display: block;
   width: 250px;
   height: 150px;
   background: rgba(0, 0, 0, 0.5);
   margin-top: 50px;
-  padding-top: 50px;
+  padding: 50px 10px;
   box-sizing: border-box;
+  opacity: 0;
 }
 
 #communityList li:nth-child(1) {background:url(../images/community1.JPEG) no-repeat center / cover;}
@@ -476,16 +500,24 @@ a { text-decoration: none; }
 #communityList li:nth-child(6) {background:url(../images/community6.JPEG) no-repeat center / cover;}
 #communityList li:nth-child(7) {background:url(../images/community7.JPEG) no-repeat center / cover;}
 #communityList li:nth-child(8) {background:url(../images/community8.JPG) no-repeat center / cover;}
-
+#communityList li:nth-child(9) {background:url(../images/community9.JPEG) no-repeat center / cover;}
+#communityList li:nth-child(10) {background:url(../images/community10.JPEG) no-repeat center / cover;}
+#communityList li:nth-child(11) {background:url(../images/community11.JPG) no-repeat center / cover;}
+#communityList li:nth-child(12) {background:url(../images/community12.JPG) no-repeat center / cover;}
+#communityList li:nth-child(13) {background:url(../images/community13.JPEG) no-repeat center / cover;}
+#communityList li:nth-child(14) {background:url(../images/community14.JPEG) no-repeat center / cover;}
+#communityList li:nth-child(15) {background:url(../images/community15.JPEG) no-repeat center / cover;}
 
 #viewMore {
   position: absolute;
-  bottom: 60px;
-  width: 130px;
+  bottom: -100px;
+  width: 100%;
   height: 40px;
-  left: calc(50% - 75px)
+
 }
-#viewMore li {}
+#viewMore li {
+  text-align: center;
+}
 #viewMore a {
   font-size: 20px;
   color: rgb(133, 29, 29);
@@ -502,7 +534,7 @@ a { text-decoration: none; }
   width: 100%;
   height: 1000px;
   position: relative;
-  top: 300px;
+  top: 650px;
 }
 #section5Title {
  text-align: center;
@@ -520,8 +552,8 @@ a { text-decoration: none; }
 
 /* 매거진 구간 */
 #magazineWrap {
-  width: 1200px;
-  height: 100vh;
+  width: 1220px;
+  height: 700px;
   position: relative;
   top: 100px;
   left: calc(50% - 630px);
@@ -531,14 +563,13 @@ a { text-decoration: none; }
   grid-template-rows: 320px 320px;
   grid-template-columns: 400px 400px 400px;
   gap: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 #magazineList li {
   text-align:center;
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 #magazineList li:nth-child(1) {background: url(../images/magazine1.jfif) no-repeat center/ cover;}
@@ -550,10 +581,17 @@ a { text-decoration: none; }
 #magazineList li:nth-child(3){background:url(../images/Magazine2.jpeg) no-repeat center/ cover}
 #magazineList li:nth-child(4) {background: url(../images/magazine4.jpg) no-repeat center/ cover}
 #magazineList li:nth-child(5) {background:url(../images/magazine5.jpg) no-repeat center / cover}
+
 #magazineList li a {
-  color: #000;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 18px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 250px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(255,255,255, 0.1) 30%, rgba(0,0,0,0.5) 70%);
 
 }
 
@@ -562,10 +600,20 @@ a { text-decoration: none; }
   width: 100%;
   height: 150px;
   position: relative;
-  bottom: -300px;
+  bottom: -600px;
   background-color: rgb(177, 177, 177);
-  padding: 15px 0;
-  box-sizing: border-box;
+  padding: 20px 0;
+  box-sizing: border-box; 
+}
+
+#footerLogo {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  text-indent: -9999px;
+  background: url(../images/logo2.png) no-repeat center/ cover;
 }
 
 #footerWrap {
@@ -574,6 +622,7 @@ a { text-decoration: none; }
   padding-left: 150px;
   box-sizing: border-box;  
 }
+
 
 address {
   font-style: normal;
