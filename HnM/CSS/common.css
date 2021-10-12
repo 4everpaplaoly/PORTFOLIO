@@ -148,25 +148,25 @@ a { text-decoration: none; }
 }
 
 /* 메인 */ 
-#conetnetWrap {
+#contentWrap {
   width: 100%;
-  height: 100vh;
+  height: 4300px;
   margin: 0 auto;
+  overflow: hidden;
 }
 #section1 {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  position: relative;
+  top:0;
+  left: calc(50% - 1600px);
 }
 
 /* 가장 최상위 슬라이더의 img 공통 설정*/
 
 #titleList {
   width: 3200px;
-  height: 1000px;
-  position: relative;
-  top:0;
-  left: calc(50% - 1600px)
+  height: 1000px; 
 }
 
 #titleList li {
@@ -226,23 +226,24 @@ a { text-decoration: none; }
 
 /* 첫 번째 슬라이더 */
 
-#titleList li:nth-child(1) {background:url(../images/slider1.jpg) no-repeat center / cover;}
-#titleList li:nth-child(2) {background:url(../images/slider2.jpg) no-repeat center / cover;}
-#titleList li:nth-child(3) {background:url(../images/slider3.jpg) no-repeat center / cover;}
+.titleList1 {background:url(../images/slider1.jpg) no-repeat center / cover;}
+.titleList2 {background:url(../images/slider2.jpg) no-repeat center / cover;}
+.titleList3 {background:url(../images/slider3.jpg) no-repeat center / cover;}
 
 
 
 /* 슬라이더 방향 알려주는 기능 설정 */
 #sliderList {
-  width: 100%;
-  height: 2px;
+  width: 2000px;
+  height: 4px;
   position: absolute;
-  top: 1100px;
-  left: 0;
+  top: 950px;
+  left: calc(50% - 1000px)
+
 }
 #sliderList li {
   width: 33.3333%;
-  height: 2px;
+  height: 3px;
   float: left;
 }
 
@@ -531,7 +532,7 @@ a { text-decoration: none; }
 /* 기본 설정 */
 #section5 {
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   position: relative;
   top: 650px;
 }
@@ -599,7 +600,7 @@ a { text-decoration: none; }
   width: 100%;
   height: 150px;
   position: relative;
-  bottom: -600px;
+  bottom: -200px;
   background-color: rgb(177, 177, 177);
   padding: 20px 0;
   box-sizing: border-box; 
