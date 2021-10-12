@@ -80,3 +80,50 @@ $("#right").on("click", function(e){
   }, 2000)
 })
 
+
+
+
+
+
+
+// customer center 롤오버 시 opacity 1로 변경
+$("#customerCenterList li").on("mouseenter", function(){
+  $(this).children("a").not("animated").animate({
+    opacity: 1
+  }, 100)
+})
+
+$("#customerCenterList li").on("mouseleave", function(){
+  $(this).children("a").not("animated").animate({
+    opacity: 0
+  }, 800)
+})
+
+
+// magazine li에 오버할 시에 a의 font-size를 20px로 변경한다.
+// 배경화면도 좀 더 짙게. (이건 어떻게 ? )
+$("#magazineList li").on("mouseenter", function(){
+  $(this).children("a").css({
+    fontSize: "20px"
+  })
+})
+$("#magazineList li").on("mouseleave", function(){
+  $(this).children("a").css({
+    fontSize: "18px"
+  })
+})
+
+
+
+// footer 링크에 롤오버될 시에 폰트 굵어짐.
+$("#snsList li").on("mouseover", function(){
+  $(this).children("a").css({
+    fontWeight: "bold"
+  })
+})
+
+$("#snsList li").on("mouseleave", function(){
+  $(this).children("a").css({
+    fontWeight: "normal"
+  })
+})
