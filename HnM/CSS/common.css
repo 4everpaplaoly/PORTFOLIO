@@ -240,7 +240,7 @@ a { text-decoration: none; }
   height: 40px;
   position:absolute;
   top: 930px;
-  left: 680px;
+  left: 650px;
   display: flex;
 }
 
@@ -270,7 +270,7 @@ a { text-decoration: none; }
   height: 40px;
   position: relative;
   top: -500px;
-  left: 700px;
+  left: 650px;
 }
 
 #sliderArrowList li a {

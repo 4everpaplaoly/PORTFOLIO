@@ -62,12 +62,11 @@ $("#down").on("click", function () {
 let liWidth = $("#titleList li").width()+50;
 
 function prevSlider() {
-  
   $("#titleList li:eq(2)").clone().prependTo($("#titleList")).css({
     marginLeft: -liWidth+"px"
   })
-  $("#titleList:not(:animated)").animate({
-    marginLeft: liWidth+"px"
+  $("#titleList li:not(:animated)").animate({
+    left: liWidth+"px"
   }, 1000, function(){
     $("#titleList li:eq(3)").remove();
   })
