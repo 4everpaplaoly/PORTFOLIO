@@ -59,17 +59,18 @@ $("#down").on("click", function () {
 // 노트북 브라우저 크기 80% = 학원 브라우저 크기
 
 // 1. 자동 슬라이더 & class & 다음.
-let liWidth = $("#titleList li").width();
-console.log(liWidth)
+let liWidth = $("#titleList li").width()+50;
 
-$("#titleList li:last").clone().prependTo($("#titleList"))
-$("#titleList").css({
-  marginLeft: -liWidth+"px"
-})
 function prevSlider() {
+  
+  $("#titleList li:eq(2)").clone().prependTo($("#titleList")).css({
+    marginLeft: -liWidth+"px"
+  })
   $("#titleList:not(:animated)").animate({
-    marginLeft: 0
-  }, 1000)
+    marginLeft: liWidth+"px"
+  }, 1000, function(){
+    $("#titleList li:eq(3)").remove();
+  })
 }
 
 
@@ -183,7 +184,7 @@ $("#communityList li").on("mouseleave", function(){
 $("#viewMore").on("click", function(){
   $(this).animate({
     bottom: "-250px"
-  }, 20, function(){
+  }, 200, function(){
     $("#section5").css({
       top: "800px"
     })
