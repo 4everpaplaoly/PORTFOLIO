@@ -60,24 +60,57 @@ $("#down").on("click", function () {
 
 // 1. 자동 슬라이더 & class & 다음.
 let liWidth = $("#titleList li").width();
-function nextSlider() {
-  // class 추가 
-  $("#sliderList li a").removeClass("on");
-  // 슬라이딩
-  $("#titleList:not(:animated)").animate({
-    marginLeft: -liWidth+"px"
-  }, 3000, function(){
-    $(this).append($("#titleList li:eq(0)")).css({
-      marginLeft: 0
-    });
-    let titleListNum = $(this).children("li").attr("class").charAt(9);
-    $(".slider"+titleListNum).children("a").addClass("on");
-  })
+console.log(liWidth)
 
+$("#titleList li:last").clone().prependTo($("#titleList"))
+$("#titleList").css({
+  marginLeft: -liWidth+"px"
+})
+function prevSlider() {
+  $("#titleList:not(:animated)").animate({
+    marginLeft: 0
+  }, 1000)
 }
 
-let nextSliderTimer = setInterval(nextSlider, 5000);
 
+// function nextSlider() {
+//   $("#titleList").append($("#titleList li:eq(0)").clone());
+//   $("#titleList:not(:animated)").animate({
+//     marginLeft: -liWidth+"px"
+//   }, 1000, function(){
+//     const titleListNum = $("#titleList li").attr("class").charAt(9)
+//     let sliderListNum = Number(titleListNum)+1;
+    
+//     if (sliderListNum >= 4){
+//       sliderListNum = 1
+//     }
+    
+//     $("#titleList li:eq(0)").remove();
+
+//     $("#titleList").css({
+//       marginLeft: "50px"
+//     })
+
+//     $("#slider"+sliderListNum).addClass("on");
+//   }
+//     )
+// }
+
+// let nextSliderTimer = setInterval(nextSlider, 3000)
+
+$("#sliderArrowList li a").on("click", function(){
+  $("#sliderArrowList li a").removeClass("onclick");
+  $(this).addClass("onclick");
+})
+
+$("#sliderArrowLeft").on("click", function(){
+  prevSlider();
+})
+
+$("#sliderArrowRight").on("click", function(){
+  // setTimeout(nextSlider, 5000);
+  // nextSlider;
+})
 // -------Best Seller Section------- 
 // 1. 상품 추천 롤오버 시 add-description 클래스 추가 구현
 // 마우스 엔터
@@ -151,14 +184,14 @@ $("#viewMore").on("click", function(){
   $(this).animate({
     bottom: "-250px"
   }, 20, function(){
+    $("#section5").css({
+      top: "800px"
+    })
+
     $("#communityList").animate({
       height: "800px"
-    }, 1000, function(){
-      $("#section5").css({
-        top: "800px"
-      })
     })
-  })
+})
 })
 
 

@@ -159,13 +159,13 @@ a { text-decoration: none; }
   height: 100vh;
   position: relative;
   top:0;
-  left: calc(50% - 1600px);
+  left: calc(50% - 1550px);
 }
 
 /* 가장 최상위 슬라이더의 img 공통 설정*/
 
 #titleList {
-  width: 3200px;
+  width: 4200px;
   height: 1000px; 
 }
 
@@ -221,6 +221,8 @@ a { text-decoration: none; }
   text-align: center;
   box-shadow: 2px 5px #fff;
   border: 1px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 
@@ -234,29 +236,75 @@ a { text-decoration: none; }
 
 /* 슬라이더 방향 알려주는 기능 설정 */
 #sliderList {
-  width: 3000px;
-  height: 4px;
-  position: absolute;
-  top: 950px;
-  left: 50px;
-}
-#sliderList li {
-  width: 33.3333%;
-  height: 3px;
-  float: left;
+  width: 1800px;
+  height: 40px;
+  position:absolute;
+  top: 930px;
+  left: 680px;
+  display: flex;
 }
 
-#sliderList li a.on {
-  background-color:rgb(133, 29, 29);
-}
-
-#sliderList li a {
+#sliderList li.slider {
   display: block;
-  width: 100%;
-  height: 100%;
-  background-color:#fff;
+  width: 583.333333px;
+  height: 2px;
+  background: #fff;
+  margin-top: 17px;
 }
 
+#sliderList li.on {
+  background: rgb(133, 29, 29);
+}
+
+
+.sliderNum  {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  float: left;
+  line-height: 35px;
+  margin: 0 20px;
+}
+
+#sliderArrowList {
+  width:1800px;
+  height: 40px;
+  position: relative;
+  top: -500px;
+  left: 700px;
+}
+
+#sliderArrowList li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 28px;
+  background-color: rgba(133, 29, 29, 0.815);
+  border: 1px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  box-shadow: 2px 5px #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  
+}
+
+#sliderArrowList li a.onclick {
+  color: #000;
+  box-shadow: 2px 5px rgba(0, 0, 0, 0.8)
+}
+#sliderArrowLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+#sliderArrowRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
 
 /* Section 2 - Best Seller */
 #section2 {
