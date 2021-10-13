@@ -150,7 +150,7 @@ a { text-decoration: none; }
 /* 메인 */ 
 #contentWrap {
   width: 100%;
-  height: 4300px;
+  height: 4500px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -234,12 +234,11 @@ a { text-decoration: none; }
 
 /* 슬라이더 방향 알려주는 기능 설정 */
 #sliderList {
-  width: 2000px;
+  width: 3000px;
   height: 4px;
   position: absolute;
   top: 950px;
-  left: calc(50% - 1000px)
-
+  left: 50px;
 }
 #sliderList li {
   width: 33.3333%;
@@ -289,14 +288,18 @@ a { text-decoration: none; }
   overflow: hidden;
   top: 10px;
   left: calc(50% - 750px);
+
 }
 #recommendList {
   width: 3000px;
   height: 350px;
   display: flex;
   justify-content: space-between;
+
 }
 #recommendList dt {
+  padding:10px 0 0 30px;
+  box-sizing: border-box;
   font-size: 24px;
   font-weight: bold;
   text-decoration-line:underline;
@@ -364,11 +367,11 @@ a { text-decoration: none; }
 }
 
 #left {
-  left:-100px;
+  left:-15px;
 }
 
 #right {
-  right: -100px;
+  right: -15px;
 }
 
 /* section 3 - customer center */

@@ -55,8 +55,10 @@ $("#down").on("click", function () {
 // 1. Title List 사진 자동 슬라이더
 // 1-1. 자동 슬라이더 되면서 Slider List에 class를 설정하는 기능 구현.
 // 2. Slider List 이용해서 사진을 넘길 수 있도록 구현.
+// 현재 CSS가 브라우저 크기 때문에 오류가 있는 듯... 
+// 노트북 브라우저 크기 80% = 학원 브라우저 크기
 
-
+// 1. 자동 슬라이더 & class & 다음.
 let liWidth = $("#titleList li").width();
 function nextSlider() {
   // class 추가 
@@ -64,7 +66,7 @@ function nextSlider() {
   // 슬라이딩
   $("#titleList:not(:animated)").animate({
     marginLeft: -liWidth+"px"
-  }, 1000, function(){
+  }, 3000, function(){
     $(this).append($("#titleList li:eq(0)")).css({
       marginLeft: 0
     });
@@ -74,7 +76,7 @@ function nextSlider() {
 
 }
 
-let nextSliderTimer = setInterval(nextSlider, 2000);
+let nextSliderTimer = setInterval(nextSlider, 5000);
 
 // -------Best Seller Section------- 
 // 1. 상품 추천 롤오버 시 add-description 클래스 추가 구현
@@ -104,7 +106,7 @@ $("#left").on("click", function (e) {
 $("#right").on("click", function (e) {
   e.preventDefault();
   $("#recommendList").animate({
-    marginLeft: "-1500px"
+    marginLeft: "-1520px"
   }, 2000)
 })
 
@@ -126,6 +128,37 @@ $("#customerCenterList li").on("mouseleave", function () {
   $(this).children("a").not("animated").animate({
     opacity: 0
   }, 800)
+})
+
+
+// -------Community Center Section-------
+// 1. CommunityList 롤오버 시 
+// CommunityList li a의 opacity가 1이 되었다가 마우스가 떨어지면 0으로 변함.
+$("#communityList li").on("mouseenter", function(){
+  $(this).children("a").not("animated").animate({
+    opacity: 1
+  }, 200)
+})
+
+$("#communityList li").on("mouseleave", function(){
+  $(this).children("a").not("animated").animate({
+    opacity: 0
+  }, 200)
+})
+// 2. View More을 클릭했을 시 community의 높이 변경,
+// Magazine의 위치 변경, Footer의 위치 변경 
+$("#viewMore").on("click", function(){
+  $(this).animate({
+    bottom: "-250px"
+  }, 20, function(){
+    $("#communityList").animate({
+      height: "800px"
+    }, 1000, function(){
+      $("#section5").css({
+        top: "800px"
+      })
+    })
+  })
 })
 
 
@@ -162,4 +195,21 @@ $("#snsList li").on("mouseleave", function () {
   $(this).children("a").css({
     fontWeight: "normal"
   })
+})
+
+
+// 부드러운 스크롤 이벤트 추가
+
+// h&m care zone
+let customerCenterTop = $("#customerCenterWrap").offset().top;
+console.log(customerCenterTop);
+$("#takeCareZone").on("click", function(){
+
+    $("html, body").not("animated").animate({
+      scrollTop: customerCenterTop-200
+    }, 800, function(){
+      $("#customerCenterList li a:eq(2)").animate({
+        opacity: 1
+      }, 200)
+    })
 })
