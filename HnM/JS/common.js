@@ -29,7 +29,7 @@ function listUp() {
 let timer = setInterval(listUp, 5000)
 
 // 2. eventWrap의 화살표 클릭했을 때 각 위치만큼 이동.
-// 2-1. up 화살표 클릭 시 
+// 2-1. up 화살표 클릭 시
 $("#up:not(:animated)").on("click", function () {
   setTimeout(timer, 7000);
   listUp();
@@ -55,46 +55,42 @@ $("#down").on("click", function () {
 // 1. Title List 사진 자동 슬라이더
 // 1-1. 자동 슬라이더 되면서 Slider List에 class를 설정하는 기능 구현.
 // 2. Slider List 이용해서 사진을 넘길 수 있도록 구현.
-// 현재 CSS가 브라우저 크기 때문에 오류가 있는 듯... 
+// 현재 CSS가 브라우저 크기 때문에 오류가 있는 듯...
 // 노트북 브라우저 크기 80% = 학원 브라우저 크기
 
 // 1. 자동 슬라이더 & class & 다음.
 let liWidth = $("#titleList li").width()+50;
+$(".titleList1").clone().appendTo($("#titleList"))
+$(".titleList3").clone().prependTo($("#titleList"))
+$("#titleList").css({
+  marginLeft: -(liWidth-450)
+})
+
 
 function prevSlider() {
-  $("#titleList li:eq(2)").clone().prependTo($("#titleList")).css({
-    marginLeft: -liWidth+"px"
-  })
-  $("#titleList li:not(:animated)").animate({
-    left: liWidth+"px"
+  $("#titleList:not(:animated)").animate({
+    marginLeft: "+="+liWidth
   }, 1000, function(){
-    $("#titleList li:eq(3)").remove();
+  $("#titleList").prepend($("#titleList li:eq(2)")).css({
+    marginLeft: -liWidth+450
   })
+
+
+
+})
 }
 
+function nextSlider() {
 
-// function nextSlider() {
-//   $("#titleList").append($("#titleList li:eq(0)").clone());
-//   $("#titleList:not(:animated)").animate({
-//     marginLeft: -liWidth+"px"
-//   }, 1000, function(){
-//     const titleListNum = $("#titleList li").attr("class").charAt(9)
-//     let sliderListNum = Number(titleListNum)+1;
-    
-//     if (sliderListNum >= 4){
-//       sliderListNum = 1
-//     }
-    
-//     $("#titleList li:eq(0)").remove();
+  $("#titleList:not(:animated)").animate({ marginLeft: "-="+liWidth}, 1000, function() {
+    $("#titleList").append($("#titleList li:eq(0)")).css({ marginLeft: -liWidth+450 })
+  })
 
-//     $("#titleList").css({
-//       marginLeft: "50px"
-//     })
-
-//     $("#slider"+sliderListNum).addClass("on");
-//   }
-//     )
-// }
+  let titleListNum = $("#titleList li:first").attr("class").charAt(9);
+  let sliderListNum = $(".slider").attr("id").charAt(6);
+  console.log (Number(titleListNum-1));
+  console.log (sliderListNum)
+}
 
 // let nextSliderTimer = setInterval(nextSlider, 3000)
 
@@ -109,9 +105,10 @@ $("#sliderArrowLeft").on("click", function(){
 
 $("#sliderArrowRight").on("click", function(){
   // setTimeout(nextSlider, 5000);
-  // nextSlider;
+  nextSlider();
+
 })
-// -------Best Seller Section------- 
+// -------Best Seller Section-------
 // 1. 상품 추천 롤오버 시 add-description 클래스 추가 구현
 // 마우스 엔터
 $("#recommendList dd a").on("mouseenter", function (e) {
@@ -129,7 +126,7 @@ $("#recommentList dd a").on("mouseleave", function (e) {
 //  2-1. 왼쪽 버튼 누르면 슬라이드
 $("#left").on("click", function (e) {
   e.preventDefault();
-  if ($("#recommendList").css("marginLeft") <= "1500px") {
+  if ($("#recommendList").css("marginLeft") <= "1280px") {
     $("#recommendList:not(:animated)").animate({
       marginLeft: "0px"
     }, 2000)
@@ -139,7 +136,7 @@ $("#left").on("click", function (e) {
 $("#right").on("click", function (e) {
   e.preventDefault();
   $("#recommendList").animate({
-    marginLeft: "-1520px"
+    marginLeft: "-1280px"
   }, 2000)
 })
 
@@ -165,40 +162,40 @@ $("#customerCenterList li").on("mouseleave", function () {
 
 
 // -------Community Center Section-------
-// 1. CommunityList 롤오버 시 
+// 1. CommunityList 롤오버 시
 // CommunityList li a의 opacity가 1이 되었다가 마우스가 떨어지면 0으로 변함.
-$("#communityList li").on("mouseenter", function(){
-  $(this).children("a").not("animated").animate({
-    opacity: 1
-  }, 200)
-})
+// $("#communityList li").on("mouseenter", function(){
+//   $(this).children("a").not("animated").animate({
+//     opacity: 1
+//   }, 200)
+// })
 
-$("#communityList li").on("mouseleave", function(){
-  $(this).children("a").not("animated").animate({
-    opacity: 0
-  }, 200)
-})
-// 2. View More을 클릭했을 시 community의 높이 변경,
-// Magazine의 위치 변경, Footer의 위치 변경 
-$("#viewMore").on("click", function(){
-  $(this).animate({
-    bottom: "-250px"
-  }, 200, function(){
-    $("#section5").css({
-      top: "800px"
-    })
+// $("#communityList li").on("mouseleave", function(){
+//   $(this).children("a").not("animated").animate({
+//     opacity: 0
+//   }, 200)
+// })
+// // 2. View More을 클릭했을 시 community의 높이 변경,
+// // Magazine의 위치 변경, Footer의 위치 변경
+// $("#viewMore").on("click", function(){
+//   $(this).animate({
+//     bottom: "-250px"
+//   }, 200, function(){
+//     $("#section5").css({
+//       top: "800px"
+//     })
 
-    $("#communityList").animate({
-      height: "800px"
-    })
-})
-})
+//     $("#communityList").animate({
+//       height: "800px"
+//     })
+// })
+// })
 
 
 // -------Magazine Section-------
 // magazine li에 오버할 시에 a의 font Size를 20px으로 변경하고
 // 색깔을 rgb(133, 29, 29)로 변경.
-// 마우스 엔터 
+// 마우스 엔터
 $("#magazineList li").on("mouseenter", function () {
   $(this).children("a").css({
     fontSize: "20px",
