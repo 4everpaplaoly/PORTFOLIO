@@ -527,7 +527,7 @@ body { position: relative; min-width: 1280px; }
 
 #communityList li:nth-child(1) {background:url(../images/community1.JPEG) no-repeat center / cover;}
 #communityList li:nth-child(2) {background:url(../images/community2.JPG) no-repeat center / cover;}
-#communityList li:nth-child(3) {background:url(../images/community3.JPG) no-repeat center / cover;}
+#communityList li:nth-child(3) {}
 #communityList li:nth-child(4) {background:url(../images/community4.JPG) no-repeat center / cover;}
 #communityList li:nth-child(5) {background:url(../images/community5.JPG) no-repeat center / cover;}
 #communityList li:nth-child(6) {background:url(../images/community6.JPEG) no-repeat center / cover;}
